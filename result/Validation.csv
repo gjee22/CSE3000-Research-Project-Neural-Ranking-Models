@@ -1,0 +1,6 @@
+function,FiQA-2018,NFCorpus,QUORA,FEVER,DBPedia,MS MARCO
+convex_identity,0.1,0.2,0.1,0,0.1,0
+convex_mm,0.5,0.6,0.5,0.1,0.4,0.2
+convex_z,0.3,0.4,0.4,0.1,0.4,0.1
+reciprocal_identity,"[1, 1]","[60, 60]","[1, 1]","[100, 1]","[80, 20]","[100, 1]"
+condorcet_fuse,0.5,0.1,0.5,0.2,0.3,0.3
