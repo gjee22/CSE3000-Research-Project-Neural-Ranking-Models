@@ -20,7 +20,7 @@ In prior to the experiment, run indexing.py for all datasets to retrieve the FF 
 ### Latency Experiment
 Latency experiment is available only for Arguana and QUORA. Run the latency_experiment.py.
 ### Ranking Change Experiment
-Available via the Jupyter notebook file.
+Available via the Heatmap_QUORA.ipynb Jupyter notebook file. Notice that the QUORA index must be in the correct path.
 
 ## Experiment Results
 The experiment results used for the project is stored under the results folder.

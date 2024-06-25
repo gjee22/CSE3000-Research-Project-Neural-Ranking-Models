@@ -32,7 +32,7 @@ def main():
     index_ref = pt.IndexFactory.of(new_file_path)
     bm25 = pt.BatchRetrieve(index_ref, wmodel="BM25")
 
-    index_path = "ffindex_arguana_tct.h5"
+    index_path = "ffindex_quora_tct.h5"
     q_encoder = TCTColBERTQueryEncoder("castorini/tct_colbert-msmarco")
 
     ff_index = OnDiskIndex.load(

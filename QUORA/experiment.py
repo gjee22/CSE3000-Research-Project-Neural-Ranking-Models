@@ -24,8 +24,6 @@ def main():
         pt.init()
 
     dataset = pt.get_dataset('irds:beir/quora/test')
-    index_ref = pt.IndexFactory.of('./sparse_index_quora/data.properties', memory=True)
-    bm25 = pt.BatchRetrieve(index_ref, wmodel="BM25")
     max_doc_len = 6
 
     indexer = pt.IterDictIndexer(
@@ -35,6 +33,9 @@ def main():
     )
 
     index_ref = indexer.index(dataset, fields=['text'])
+    bm25 = pt.BatchRetrieve(index_ref, wmodel="BM25")
+
+    index_path = "ffindex_quora_tct.h5"
     q_encoder = TCTColBERTQueryEncoder("castorini/tct_colbert-msmarco")
 
     ff_index = OnDiskIndex.load(
