@@ -31,7 +31,7 @@ def main():
     )
 
     ff_index = OnDiskIndex(
-        Path("ffindex_arguana_tct.h5"), dim=768, query_encoder=q_encoder, mode=Mode.MAXP, max_id_length=47
+        Path("ffindex_arguana_tct.h5"), dim=768, query_encoder=q_encoder, mode=Mode.MAXP, max_id_length=53
     )
 
     ff_indexer = Indexer(ff_index, d_encoder, batch_size=128)

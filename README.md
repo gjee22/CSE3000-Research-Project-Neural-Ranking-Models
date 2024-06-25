@@ -12,5 +12,12 @@ for the _Neural Ranking Models_ project for the 2024 CSE3000 Research Project.
 The documentations of the project can be found in https://github.com/TU-Delft-CSE/Research-Project?tab=readme-ov-file
 
 ## Steps to Follow for Reproducing the Experiment
-1. Indexing: run indexing.py to create the FF indexes for each dataset
-2. Running the experiment: 
+There are three experiments conducted for this research. 
+In prior to the experiment, run indexing.py for all datasets to retrieve the FF index.
+### Ranking Effectiveness Experiment
+1. Validation: run validation.py for a dataset if it is available (FiQA-2018, MS MARCO, DBPedia, FEVER, NFCorpus, QUORA) 
+2. Experiment: run experiment.py
+### Latency Experiment
+Latency experiment is available only for Arguana and QUORA. Run the latency_experiment.py.
+### Ranking Change Experiment
+Available via the Jupyter notebook file.
