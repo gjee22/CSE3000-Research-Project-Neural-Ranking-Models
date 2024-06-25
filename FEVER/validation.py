@@ -112,6 +112,10 @@ def condorcet_experiment(candidates, ff_int, dataset):
     return [alpha_map, alpha_RR, alpha_nDCG]
 
 def output_to_file(res):
+    """
+    Converts validation result to a csv file
+    :param res: validation result in list of dictionaries
+    """
     df = pd.DataFrame(res)
     df.to_csv("FEVER_validation.csv", index=False)
 

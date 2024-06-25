@@ -40,7 +40,8 @@ def main():
     ff_index = ff_index.to_memory()
     ff_score = FFScore(ff_index)
     num_candidates = 100
-    sparse = (~bm25 % num_candidates)(dataset.get_topics())
+    sample = dataset.get_topics().sample(n=3000, random_state=42)
+    sparse = (~bm25 % num_candidates)(sample)
     candidates = ff_score(sparse)
     res = []
 
@@ -100,6 +101,10 @@ def condorcet_experiment(candidates, ff_int, dataset):
     return [alpha_map, alpha_RR, alpha_nDCG]
 
 def output_to_file(res):
+    """
+    Converts validation result to a csv file
+    :param res: validation result in list of dictionaries
+    """
     df = pd.DataFrame(res)
     df.to_csv("MSMARCO_passage_validation.csv", index=False)
 
